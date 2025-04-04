@@ -32,7 +32,8 @@ export default function Home() {
     const flaecheProPaneel = +(paneelBreite * h).toFixed(4);
     const gesamtflaeche = +(anzahlPaneele * flaecheProPaneel).toFixed(2);
     const preisProM2 = +(gesamtpreis / gesamtflaeche).toFixed(2);
-    const schraubenProPaneel = Math.max(3, Math.ceil(h / 0.6)) * 3;
+    const schraubenReihen = Math.max(3, Math.ceil(h / 0.6));
+    const schraubenProPaneel = schraubenReihen * 3;
     const gesamtSchrauben = anzahlPaneele * schraubenProPaneel;
 
     setErgebnis({
