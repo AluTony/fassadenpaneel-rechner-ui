@@ -88,7 +88,7 @@ export default function Home() {
             ['endabschluss', 'Endabschluss (Abschlusskante)'],
             ['oberseitenabschluss', 'Ober-/Seitenabschluss (Oberseite oder Seiten links rechts abdecken)'],
             ['fensterbank', 'Fensterbank'],
-            ['rahmen', 'Rahmenabdeckung (Fenster oder Tür umrahmen) (Fenster/Tür)'],
+            ['rahmen', 'Rahmenabdeckung (Fenster oder Tür umrahmen)'],
             ['wandabdeckung', 'Mauerabdeckung'],
             ['trenner', 'Unterseite / Trenner (Unterseite anschließen, oder 2 Paneele anstoßen)'],
           ].map(([key, label]) => (
