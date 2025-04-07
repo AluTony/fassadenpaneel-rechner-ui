@@ -46,11 +46,11 @@ export default function Home() {
       'Außenecke': roundUp240(accessories.aussenecke),
       'Innenecke': roundUp240(accessories.innenecke),
       'Endabschluss (Abschlusskante)': roundUp240(accessories.endabschluss),
-      'Ober-/Seitenabschluss': roundUp240(accessories.oberseitenabschluss),
+      'Ober-/Seitenabschluss (Oberseite oder Seiten links rechts abdecken)': roundUp240(accessories.oberseitenabschluss),
       'Fensterbank': roundUp240(accessories.fensterbank),
-      'Rahmenabdeckung': roundUp240(accessories.rahmen),
-      'Wandabdeckung': roundUp240(accessories.wandabdeckung),
-      'Unterseite / Trenner': roundUp240(accessories.trenner),
+      'Rahmenabdeckung (Fenster oder Tür umrahmen)': roundUp240(accessories.rahmen),
+      'Mauerabdeckung': roundUp240(accessories.wandabdeckung),
+      'Unterseite / Trenner (Unterseite anschließen, oder 2 Paneele anstoßen)': roundUp240(accessories.trenner),
     };
 
     setResult({
@@ -86,11 +86,11 @@ export default function Home() {
             ['aussenecke', 'Außenecke'],
             ['innenecke', 'Innenecke'],
             ['endabschluss', 'Endabschluss (Abschlusskante)'],
-            ['oberseitenabschluss', 'Ober-/Seitenabschluss'],
+            ['oberseitenabschluss', 'Ober-/Seitenabschluss (Oberseite oder Seiten links rechts abdecken)'],
             ['fensterbank', 'Fensterbank'],
-            ['rahmen', 'Rahmenabdeckung (Fenster/Tür)'],
-            ['wandabdeckung', 'Wandabdeckung'],
-            ['trenner', 'Unterseite / Trenner'],
+            ['rahmen', 'Rahmenabdeckung (Fenster oder Tür umrahmen) (Fenster/Tür)'],
+            ['wandabdeckung', 'Mauerabdeckung'],
+            ['trenner', 'Unterseite / Trenner (Unterseite anschließen, oder 2 Paneele anstoßen)'],
           ].map(([key, label]) => (
             <label key={key}>
               {label}:
@@ -122,6 +122,7 @@ export default function Home() {
           <p><strong>Gesamtfläche:</strong> {result.totalArea} m²</p>
           <p><strong>Preis pro m²:</strong> {result.pricePerM2} €</p>
           <p><strong>Gesamtschrauben:</strong> {result.screws} Stück</p>
+<p><strong>Schrauben-Packungen (à 100):</strong> {Math.ceil(result.screws / 100)} Packungen</p>
           <h4>Zubehör (gerundet auf 2,40 m):</h4>
           <ul style={{ paddingLeft: '1.2rem' }}>
             {Object.entries(result.zubehör).map(([key, val]) => (
