@@ -108,11 +108,11 @@ export default function Home() {
           <p><strong>Preis pro m²:</strong> {result.pricePerM2} €</p>
           <p><strong>Schrauben gesamt:</strong> {result.screws} Stück</p>
           <h4>Zubehör (jeweils 2,40 m Stücke):</h4>
-          <ul style={{ paddingLeft: "1rem", listStyleType: "disc" }}>
+          <ul className="zubehoer-liste">
             {Object.entries(result.zubehör).map(([key, val]) => (
               <li key={key}>{key}: {val} Stück</li>
             ))}
-          </ul style={{ paddingLeft: "1rem", listStyleType: "disc" }}>
+          </ul>
         </div>
       )}
     </div>
