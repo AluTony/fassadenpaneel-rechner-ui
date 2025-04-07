@@ -60,7 +60,10 @@ export default function Home() {
 
   return (
     <div style={{ fontFamily: 'Arial', padding: '2rem', maxWidth: 800, margin: 'auto' }}>
-      <h1>AluWood Rechner mit Zubehör</h1>
+      <div style={{ display: "flex", justifyContent: "center", marginBottom: "1.5rem" }}>
+  <img src="/logo.png" alt="WoodUpp Logo" style={{ maxHeight: "60px", objectFit: "contain" }} />
+</div>
+<h1 style={{ textAlign: "center" }}>AluWood Rechner mit Zubehör</h1>
 
       <label>Wandbreite (m):</label>
       <input type="number" step="0.01" value={width} onChange={(e) => setWidth(e.target.value)} />
@@ -105,11 +108,11 @@ export default function Home() {
           <p><strong>Preis pro m²:</strong> {result.pricePerM2} €</p>
           <p><strong>Schrauben gesamt:</strong> {result.screws} Stück</p>
           <h4>Zubehör (jeweils 2,40 m Stücke):</h4>
-          <ul>
+          <ul style={{ paddingLeft: "1rem", listStyleType: "disc" }}>
             {Object.entries(result.zubehör).map(([key, val]) => (
               <li key={key}>{key}: {val} Stück</li>
             ))}
-          </ul>
+          </ul style={{ paddingLeft: "1rem", listStyleType: "disc" }}>
         </div>
       )}
     </div>
